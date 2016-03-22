@@ -4,7 +4,9 @@ var PlanetWrapper = React.createClass({
 
   render: function() {
     return (
-      <div className='planet' />
+      <div className='planet-wrapper' >
+        <img src='/dist/images/Jupiter2.svg' className='planet-img' />
+      </div>
     );
   }
 
