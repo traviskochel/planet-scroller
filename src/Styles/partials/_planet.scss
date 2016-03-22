@@ -1,0 +1,17 @@
+// @-webkit-keyframes side-scroller {
+//   0% {background-position:  -100% center;}
+//   100% {background-position:  100% center;}
+// }
+@keyframes side-scroller {
+  0% {background-position:  0 center;}
+  100% {background-position:  -10389px center;}
+}
+.planet {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: url('/dist/images/Jupiter2.svg') repeat;
+  background-size: 10389px 1431px;
+  background-position:  0 center;
+  // -webkit-animation: side-scroller 20s linear infinite alternate;
+  animation: side-scroller 30s linear infinite;
+}
