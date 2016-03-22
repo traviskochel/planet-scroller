@@ -1,7 +1,7 @@
-// @-webkit-keyframes side-scroller {
-//   0% {background-position:  -100% center;}
-//   100% {background-position:  100% center;}
-// }
+@-webkit-keyframes side-scroller {
+  0% {background-position:  0 center;}
+  100% {background-position:  -10389px center;}
+}
 @keyframes side-scroller {
   0% {background-position:  0 center;}
   100% {background-position:  -10389px center;}
@@ -12,6 +12,6 @@
   background: url('/dist/images/Jupiter2.svg') repeat;
   background-size: 10389px 1431px;
   background-position:  0 center;
-  // -webkit-animation: side-scroller 20s linear infinite alternate;
+  -webkit-animation: side-scroller 30s linear infinite;
   animation: side-scroller 30s linear infinite;
 }
