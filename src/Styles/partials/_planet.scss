@@ -6,15 +6,22 @@ $container-width: 1500vh;
   100% {transform: translate(-$img-width, 0);}
 }
 
-.planet-wrapper {
+.planet-img-container {
   position: fixed;
   top: 0; bottom: 0; left: 0;
-  background-color: #000;
   width: $container-width;
   @include animation(img-scroller 60s linear infinite);
 }
 
-
+.planet-backdrop {
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  background-image: url('/dist/images/Jupiter2.svg');
+  background-size: $img-width 100vh;
+  background-attachment: fixed;
+  background-position: 0 0;
+  background-color: #000;
+}
 
 .planet-img {
   position: relative;
