@@ -32,3 +32,8 @@
         @content;
     }
 }
+
+@mixin animation($animationContent) {
+  -webkit-animation: $animationContent;
+  animation: $animationContent;
+}

@@ -1,40 +1,23 @@
-@-webkit-keyframes bg-scroller {
-  0% {background-position:  0 center;}
-  100% {background-position:  -10389px center;}
-}
-@keyframes bg-scroller {
-  0% {background-position:  0 center;}
-  100% {background-position:  -10389px center;}
-}
-
-
-.planet-wrapper {
-  position: fixed;
-  top: 0; right: 0; bottom: 0; left: 0;
-  background-color: #ff0;
-}
-
-.planet-bg {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  background: url('/dist/images/Jupiter2.svg') repeat;
-  background-size: 10389px 1431px;
-  background-position:  0 center;
-  -webkit-animation: bg-scroller 30s linear infinite;
-  animation: bg-scroller 30s linear infinite;
-}
+$img-width: 725.9vh;
+$container-width: 1500vh;
 
 @include keyframes(img-scroller) {
   0% {transform: translate(0, 0);}
-  100% {transform: translate(-725.9vh, 0);}
+  100% {transform: translate(-$img-width, 0);}
 }
 
+.planet-wrapper {
+  position: fixed;
+  top: 0; bottom: 0; left: 0;
+  background-color: #000;
+  width: $container-width;
+  @include animation(img-scroller 60s linear infinite);
+}
+
+
+
 .planet-img {
-  // transform: translate(100px, 100px)
-  // width: 10389px;
-  // height: 1431px;
+  position: relative;
   height: 100vh;
-  width: 725.9vh;
-  -webkit-animation: img-scroller 30s linear infinite;
-  animation: img-scroller 30s linear infinite;
+  width: $img-width;
 }
